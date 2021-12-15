@@ -1,0 +1,64 @@
+﻿<nav class="navbar navbar-dark navbar-expand-md bg-dark p-0">
+    <div class="container">
+        <a href="/" class="navbar-brand">
+            <i class="fas fa-blog primary-col"></i> &nbsp;
+            Robin Hellström
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon "></span>
+        </button>
+        <div id="navbarMain" class="collapse navbar-collapse">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a href="@HomeUri" class="nav-link p-3 @(IsActive(HomeUri) ? "active" : string.Empty)">
+                        <i class="fas fa-home fa-xs  me-1 @(IsActive(HomeUri) ? IconColor : string.Empty)"></i>Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="@ProjectsUri" class="nav-link p-3 @(IsActive(ProjectsUri) ? "active" : string.Empty)">
+                        <i class="fas fa-project-diagram fa-xs me-1 @(IsActive(ProjectsUri) ? IconColor : string.Empty)"></i>Project
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+@code
+{
+    [Inject] public NavigationManager NavigationManager { get; set; }
+
+    private const string IconColor = "primary-col";
+    // Navigation links
+    private const string HomeUri = "/";
+    private const string ProjectsUri = "/projects";
+
+    private bool IsActive(string pageToCheck)
+    {
+        string[] currentPageSplit = NavigationManager.Uri.Split('/').Skip(3).ToArray();
+
+        if (pageToCheck == HomeUri)
+        {
+            if (currentPageSplit.Last().Length == 0)
+            {
+                return true;
+            }
+        }
+        else
+        {
+            string[] pageToCheckUriSplitBetweenSlashes = pageToCheck.Split('/').Skip(1).ToArray();
+
+            foreach (string currentUriPart in currentPageSplit)
+            {
+                foreach (string pageToCheckUriPart in pageToCheckUriSplitBetweenSlashes)
+                {
+                    if (pageToCheckUriPart == currentUriPart)
+                    {
+                        return true;
+                    }
+                }
+            }
+        }
+        return false;
+    }
+}

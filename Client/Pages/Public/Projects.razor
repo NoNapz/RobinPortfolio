@@ -1,0 +1,50 @@
+﻿@page "/projects"
+
+@using Client.Services
+
+<Client.Components.Public.Navbar />
+
+<main class="container min-vh-90 py-5">
+    <div class="row">
+        <div class="col">
+            <h1 class="my-3">Testing API call to github</h1>
+
+            <div class="row">
+
+                @if (InMemoryDBC.GitRepos != null)
+                {
+                    for (int i = 1; i < InMemoryDBC.GitRepos.Count; i++)
+                    {
+                        <div class="col-md-4">
+                            TODO ( @i - repo found )
+                        </div>
+                    }
+                }
+            </div>
+        </div>
+    </div>
+
+</main>
+
+@implements IDisposable
+@code
+{
+    // Inject The Data from Cache
+    [Inject] InMemoryDBC InMemoryDBC { get; set; }
+
+    //Subscribe to data cache 
+    protected override async Task OnInitializedAsync()
+    {
+        InMemoryDBC.OnGitRepoDataChange += StateHasChanged;
+        if(InMemoryDBC.GitRepos == null)
+        {
+            await InMemoryDBC.GetGithubReposFromCache();
+        }
+    }
+
+    // Unsubscribe or ur memory leaks LMAMO
+    public void Dispose()
+    {
+        InMemoryDBC.OnGitRepoDataChange -= StateHasChanged;
+    }
+}

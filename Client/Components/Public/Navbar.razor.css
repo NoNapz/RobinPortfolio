@@ -1,0 +1,38 @@
+﻿.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.bg-dark {
+    background-color: #161616 !important;
+}
+
+.active {
+    border-bottom: 3px solid #3DCFD3;
+}
+
+@media screen and (max-width: 768px) {
+    .active {
+        border-bottom: none;
+        border-left: 2px solid #3DCFD3 !important;
+    }
+
+    .nav-link {
+        border-left: 2px solid #252525;
+        justify-content: center;
+    }
+
+    .navbar {
+        padding: .5rem 0rem !important;
+    }
+
+    .container {
+        max-width: none;
+    }
+}
