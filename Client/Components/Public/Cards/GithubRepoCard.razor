@@ -1,0 +1,13 @@
+﻿@using Shared.Models
+
+<div class="card shadow mb-2">
+    <div class="card-body">
+        <h3 class="class-title">@Ghc.Name</h3>
+        <p class="card-text">@Ghc.Full_Name</p>
+    </div>
+</div>
+
+@code 
+{
+ [Parameter] public GithubRepos Ghc { get; set; }
+}

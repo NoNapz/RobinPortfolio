@@ -1,5 +1,5 @@
 ﻿@page "/projects"
-
+@using Client.Components.Public.Cards
 @using Client.Services
 
 <Client.Components.Public.Navbar />
@@ -16,7 +16,7 @@
                     for (int i = 1; i < InMemoryDBC.GitRepos.Count; i++)
                     {
                         <div class="col-md-4">
-                            TODO ( @i - repo found )
+                            <GithubRepoCard Ghc="InMemoryDBC.GitRepos[i]"/>
                         </div>
                     }
                 }
