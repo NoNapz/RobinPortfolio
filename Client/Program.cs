@@ -9,5 +9,6 @@ builder.RootComponents.Add<HeadOutlet>("head::after");
 
 builder.Services.AddSingleton<HttpClient>();
 builder.Services.AddSingleton<InMemoryDBC>();
+builder.Services.AddSingleton<GithubAPI>();
 
 await builder.Build().RunAsync();

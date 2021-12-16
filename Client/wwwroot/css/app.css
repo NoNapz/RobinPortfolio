@@ -10,6 +10,10 @@
     color: #3DCFD3 !important;
 }
 
+.hero {
+    position: relative;
+}
+
 .validation-message {
     color: red;
 }

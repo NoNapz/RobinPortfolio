@@ -8,15 +8,13 @@
     <div class="row">
         <div class="col">
             <h1 class="my-3">Testing API call to github</h1>
-
             <div class="row">
-
-                @if (InMemoryDBC.GitRepos != null)
+                @if (GithubAPI.GitRepos != null)
                 {
-                    for (int i = 1; i < InMemoryDBC.GitRepos.Count; i++)
+                    for (int i = 1; i < GithubAPI.GitRepos.Count; i++)
                     {
                         <div class="col-md-4">
-                            <GithubRepoCard Ghc="InMemoryDBC.GitRepos[i]"/>
+                            <GithubRepoCard Ghc="GithubAPI.GitRepos[i]"/>
                         </div>
                     }
                 }
@@ -26,25 +24,7 @@
 
 </main>
 
-@implements IDisposable
-@code
-{
-    // Inject The Data from Cache
-    [Inject] InMemoryDBC InMemoryDBC { get; set; }
-
-    //Subscribe to data cache 
-    protected override async Task OnInitializedAsync()
-    {
-        InMemoryDBC.OnGitRepoDataChange += StateHasChanged;
-        if(InMemoryDBC.GitRepos == null)
-        {
-            await InMemoryDBC.GetGithubReposFromCache();
-        }
-    }
-
-    // Unsubscribe or ur memory leaks LMAMO
-    public void Dispose()
-    {
-        InMemoryDBC.OnGitRepoDataChange -= StateHasChanged;
-    }
+@code {
+    [Inject] GithubAPI GithubAPI { get; set; }
+    protected override async Task OnInitializedAsync() => await GithubAPI.GetGitHubData();
 }
