@@ -11,7 +11,7 @@
             <div class="row">
                 @if (GithubAPI.GitRepos != null)
                 {
-                    for (int i = 1; i < GithubAPI.GitRepos.Count; i++)
+                    for (int i = 0; i < GithubAPI.GitRepos.Count; i++)
                     {
                         <div class="col-md-4">
                             <GithubRepoCard Ghc="GithubAPI.GitRepos[i]"/>
