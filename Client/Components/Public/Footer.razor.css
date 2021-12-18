@@ -1,0 +1,36 @@
+﻿.social-icon {
+    border: 1px solid #8b9199;
+    color: #8b9199;
+    display: inline-block;
+    height: 40px;
+    padding-top: 7px;
+    width: 40px;
+    text-align: center;
+}
+
+.created {
+    text-align: right;
+}
+
+.social-icon:hover {
+    border: 1px solid #3DCFD3;
+    color: #3DCFD3;
+}
+
+footer {
+    background-color: #252525;
+    position: relative;
+    margin-top: 4rem;
+    color: #8b9199;
+}
+
+@media screen and (max-width: 768px){
+
+    .created {
+        text-align:center;
+    }
+    .social-foot-ul {
+        justify-content: center;
+        margin-bottom: 0;
+    }
+}

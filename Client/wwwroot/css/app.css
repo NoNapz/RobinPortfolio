@@ -6,12 +6,207 @@
     --ternary: #898989;
 }
 
+body {
+    min-height: 100vh;
+    box-sizing: border-box
+}
+
 .primary-col {
     color: #3DCFD3 !important;
 }
 
+.btn-bluetrans {
+    background: transparent;
+    color: #3DCFD3;
+    border-color: #3DCFD3;
+}
+
+    .btn-bluetrans:hover {
+        color: #ffffff;
+        border-color: #ffffff;
+    }
+
+/*HERO SECTION*/
+
+/* SHAPE DIVIDER FROM SHAPEDIVIDERS.COM*/
+.shapedividers_com-6507 {
+    overflow: hidden;
+    position: relative;
+}
+
+    .shapedividers_com-6507::before {
+        content: '';
+        font-family: 'shape divider from ShapeDividers.com';
+        position: absolute;
+        z-index: 3;
+        pointer-events: none;
+        background-repeat: no-repeat;
+        bottom: -0.1vw;
+        left: -0.1vw;
+        right: -0.1vw;
+        top: -0.1vw;
+        background-size: 100% 133px;
+        background-position: 50% 100%;
+        background-image: url('data:image/svg+xml;charset=utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.278 3.52" preserveAspectRatio="none"><path d="M0 3.528S27.04 3.352 35.278 0v3.528z" opacity=".2" fill="%23ffffff"/><path d="M0 3.528S27.04 3.374 35.278.425v3.103z" opacity=".2" fill="%23ffffff"/><path d="M0 3.528S27.04 3.396 35.278.882v2.646z" fill="%23ffffff"/><path d="M0 3.527h35.278v.092H0z" fill="%23ffffff"/></svg>');
+    }
+
+@media (min-width:2100px) {
+    .shapedividers_com-6507::before {
+        background-size: 100% calc(2vw + 133px);
+    }
+}
+/* END OF SHAPE DIVIDER */
+
+
+
 .hero {
     position: relative;
+    background-color: #161616;
+}
+
+.hero-row {
+    height: 50vh;
+}
+
+.hero-h3 {
+    font-weight: 500;
+    font-size: 1.6rem;
+    position: relative;
+    letter-spacing: 0.2rem;
+}
+
+.hero-h1 {
+    font-size: 2.3rem;
+}
+
+.hero-h2 {
+    font-weight: 300;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.hero-h3::after {
+    content: '';
+    position: absolute;
+    text-align: center;
+    top: 1rem;
+    width: 3rem;
+    height: 0.05rem;
+    margin-left: .5rem;
+    background-color: #3DCFD3;
+}
+
+.hero-h3::before {
+    content: '';
+    position: absolute;
+    text-align: center;
+    top: 1rem;
+    width: 3rem;
+    height: 0.05rem;
+    margin-left: -3.6rem;
+    background-color: #3DCFD3;
+    display: none;
+}
+
+/* Skill bars */
+
+.about-h2 {
+    font-weight: 300;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-weight: 500;
+    color: #252525;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+
+.skills {
+    text-align: left;
+    margin-bottom: 0.7rem;
+    border-radius: inherit;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    color: #161616;
+    animation: anim-bar 2s 0s;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+}
+
+.skills-prec {
+    margin-left: 1rem;
+}
+
+.social-skills {
+    background-color: #EEEEEE;
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 1.5rem;
+}
+
+@keyframes anim-bar {
+    from {
+        width: 0%;
+    }
+}
+
+.ex1 {
+    width: 90%;
+    background-color: #3DCFD3;
+}
+
+.ex2 {
+    width: 60%;
+    background-color: #3DCFD3;
+}
+
+.ex3 {
+    width: 75%;
+    background-color: #3DCFD3;
+}
+
+.ex4 {
+    width: 80%;
+    background-color: #3DCFD3;
+}
+
+/* Fade in animation */
+
+.fadeIn * {
+    animation: fadeIn 1s ease-out 1s forwards;
+    opacity: 0;
+}
+
+.fadeIn *:nth-child(1) {
+    animation-delay: .25s;
+}
+
+.fadeIn *:nth-child(2) {
+    animation-delay: .5s;
+}
+
+.fadeIn *:nth-child(3) {
+    animation-delay: .75s;
+}
+
+.fadeIn *:nth-child(4) {
+    animation-delay: 1s;
+}
+
+@keyframes fadeIn {
+    0% {
+        transform: scale(.8);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 .validation-message {

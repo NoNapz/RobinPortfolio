@@ -24,6 +24,8 @@
 
 </main>
 
+<Client.Components.Public.Footer />
+
 @code {
     [Inject] GithubAPI GithubAPI { get; set; }
     protected override async Task OnInitializedAsync() => await GithubAPI.GetGitHubData();

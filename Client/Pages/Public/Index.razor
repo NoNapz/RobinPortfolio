@@ -1,11 +1,53 @@
 ﻿@page "/"
 
+@inject IJSRuntime JS;
+
 <Client.Components.Public.Navbar />
 
 <main>
+    <section class="hero shapedividers_com-6507">
+        <div class="container">
+            <div class="row hero-row align-items-center">
+                <div class="col-lg-6 col-12">
+                </div>
+                <div class="text-white col-lg-6 col-12 fadeIn">
+                    <h3 class="mb-2 hero-h3 fst-italic">Welcome</h3>
+                    <h1 class="hero-h1">I<span class=primary-col>'</span>m Robin Hellström<span class="primary-col">,</span></h1>
+                    <h2 class="hero-h2">A <span class="primary-col">Full-Stack</span> Developer</h2>
+                    <div class="mt-4">
+                        <button class="btn btn-bluetrans">Read More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <section>
-        <div class="container vh-70 hero">
-
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-lg-4 col-12">
+                    <h2 class="about-h2">Individual Perks</h2>
+                    <div class="me-4">
+                        <div class="social-skills">
+                            <div class="skills ex1"><span class="skills-prec">90%</span></div>
+                        </div>
+                        <div class="social-skills">
+                            <div class="skills ex2"><span class="skills-prec">60%</span></div>
+                        </div>
+                        <div class="social-skills">
+                            <div class="skills ex3"><span class="skills-prec">75%</span></div>
+                        </div>
+                        <div class="social-skills">
+                            <div class="skills ex4"><span class="skills-prec">80%</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-12">
+                    <h2 class="about-h2">Who Am I<span class="primary-col">?</span></h2>
+                    <p>Duis sapien elit, mollis ut purus non, hendrerit auctor metus. Nunc vitae neque vitae dui molestie fermentum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Etiam quis sollicitudin felis. Etiam non odio semper, vestibulum nisi ac, faucibus odio. Mauris at augue dolor. Quisque aliquam elit nisi, sed iaculis est vestibulum et. Nam vitae placerat nulla, nec egestas eros. Sed sed dictum urna. Cras tempor felis a erat volutpat vehicula.</p>
+                </div>
+            </div>
         </div>
     </section>
 </main>
+
+<Client.Components.Public.Footer />
