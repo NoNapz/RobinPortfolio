@@ -1,0 +1,15 @@
+﻿@using Shared.Models
+
+<div class="card shadow mb-2">
+    <div class="card-body">
+        <img  class="img-thumbnail" src="@BP.Thumbnail"/>
+        <h3 class="class-title">@BP.Title</h3>
+        <p class="card-text">@BP.Content</p>
+        <p class="card-text">@BP.Created_At</p>
+    </div>
+</div>
+
+@code 
+{
+ [Parameter] public BlogPost BP { get; set; }
+}

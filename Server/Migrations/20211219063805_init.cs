@@ -29,17 +29,17 @@ namespace Server.Migrations
             migrationBuilder.InsertData(
                 table: "BlogPosts",
                 columns: new[] { "BlogId", "Content", "Created_At", "Thumbnail", "Title", "Updated_At" },
-                values: new object[] { 1, "Descriprion for test data 1", new DateTime(2021, 12, 19, 5, 32, 48, 28, DateTimeKind.Local).AddTicks(3511), "./uploads/placeholder.jpg", "Test Data 1", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) });
+                values: new object[] { 1, "Descriprion for test data 1", new DateTime(2021, 12, 19, 7, 38, 4, 919, DateTimeKind.Local).AddTicks(5373), "./images/placeholder.jpg", "Test Data 1", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) });
 
             migrationBuilder.InsertData(
                 table: "BlogPosts",
                 columns: new[] { "BlogId", "Content", "Created_At", "Thumbnail", "Title", "Updated_At" },
-                values: new object[] { 2, "Descriprion for test data 2", new DateTime(2021, 12, 19, 5, 32, 48, 28, DateTimeKind.Local).AddTicks(3550), "./uploads/placeholder.jpg", "Test Data 2", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) });
+                values: new object[] { 2, "Descriprion for test data 2", new DateTime(2021, 12, 19, 7, 38, 4, 919, DateTimeKind.Local).AddTicks(5410), "./images/placeholder.jpg", "Test Data 2", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) });
 
             migrationBuilder.InsertData(
                 table: "BlogPosts",
                 columns: new[] { "BlogId", "Content", "Created_At", "Thumbnail", "Title", "Updated_At" },
-                values: new object[] { 3, "Descriprion for test data 3", new DateTime(2021, 12, 19, 5, 32, 48, 28, DateTimeKind.Local).AddTicks(3554), "./uploads/placeholder.jpg", "Test Data 3", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) });
+                values: new object[] { 3, "Descriprion for test data 3", new DateTime(2021, 12, 19, 7, 38, 4, 919, DateTimeKind.Local).AddTicks(5413), "./images/placeholder.jpg", "Test Data 3", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

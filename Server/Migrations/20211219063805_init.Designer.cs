@@ -11,7 +11,7 @@ using Server.Data;
 namespace Server.Migrations
 {
     [DbContext(typeof(AppDBContext))]
-    [Migration("20211219043248_init")]
+    [Migration("20211219063805_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -54,8 +54,8 @@ namespace Server.Migrations
                         {
                             BlogId = 1,
                             Content = "Descriprion for test data 1",
-                            Created_At = new DateTime(2021, 12, 19, 5, 32, 48, 28, DateTimeKind.Local).AddTicks(3511),
-                            Thumbnail = "./uploads/placeholder.jpg",
+                            Created_At = new DateTime(2021, 12, 19, 7, 38, 4, 919, DateTimeKind.Local).AddTicks(5373),
+                            Thumbnail = "./images/placeholder.jpg",
                             Title = "Test Data 1",
                             Updated_At = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -63,8 +63,8 @@ namespace Server.Migrations
                         {
                             BlogId = 2,
                             Content = "Descriprion for test data 2",
-                            Created_At = new DateTime(2021, 12, 19, 5, 32, 48, 28, DateTimeKind.Local).AddTicks(3550),
-                            Thumbnail = "./uploads/placeholder.jpg",
+                            Created_At = new DateTime(2021, 12, 19, 7, 38, 4, 919, DateTimeKind.Local).AddTicks(5410),
+                            Thumbnail = "./images/placeholder.jpg",
                             Title = "Test Data 2",
                             Updated_At = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -72,8 +72,8 @@ namespace Server.Migrations
                         {
                             BlogId = 3,
                             Content = "Descriprion for test data 3",
-                            Created_At = new DateTime(2021, 12, 19, 5, 32, 48, 28, DateTimeKind.Local).AddTicks(3554),
-                            Thumbnail = "./uploads/placeholder.jpg",
+                            Created_At = new DateTime(2021, 12, 19, 7, 38, 4, 919, DateTimeKind.Local).AddTicks(5413),
+                            Thumbnail = "./images/placeholder.jpg",
                             Title = "Test Data 3",
                             Updated_At = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         });

@@ -23,7 +23,7 @@ namespace Server.Data
                     Title = $"Test Data {i}",
                     Content = $"Descriprion for test data {i}",
                     Created_At = DateTime.Now,
-                    Thumbnail = "./uploads/placeholder.jpg"
+                    Thumbnail = "./images/placeholder.jpg"
                 };
             }
 
