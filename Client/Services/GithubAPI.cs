@@ -14,17 +14,17 @@ namespace Client.Services
         }
 
         private string GitAPIUri = "https://api.github.com/users/NoNapz/repos";
-        string errorMessage;
+        string? _errorMessage;
         internal async Task GetGitHubData()
         {
             try
             {
                 GitRepos = await _httpClient.GetFromJsonAsync<List<GithubRepos>>(GitAPIUri);
-                errorMessage = null;
+                _errorMessage = null;
             }
             catch (Exception ex)
             {
-                errorMessage = $"Error getting github data at this time: {ex}";
+                _errorMessage = $"Error getting github data at this time: {ex}";
             }
         }
     }

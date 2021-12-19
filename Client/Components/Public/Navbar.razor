@@ -1,7 +1,7 @@
 ﻿<nav class="navbar navbar-dark navbar-expand-md bg-dark p-0">
     <div class="container">
         <a href="/" class="navbar-brand">
-            <i class="fas fa-blog primary-col"></i> &nbsp;
+            <i class="fas fa-meteor primary-col"></i> &nbsp;
             Robin H
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
@@ -12,6 +12,11 @@
                 <li class="nav-item">
                     <a href="@HomeUri" class="nav-link p-3 @(IsActive(HomeUri) ? "active" : string.Empty)">
                         <i class="fas fa-home fa-xs  me-1 @(IsActive(HomeUri) ? IconColor : string.Empty)"></i>Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="@BlogUri" class="nav-link p-3 @(IsActive(BlogUri) ? "active" : string.Empty)">
+                        <i class="fas fa-blog fa-xs me-1 @(IsActive(BlogUri) ? IconColor : string.Empty)"></i>Blog
                     </a>
                 </li>
                 <li class="nav-item">
@@ -36,6 +41,7 @@
     private const string IconColor = "primary-col";
     // Navigation links
     private const string HomeUri = "/";
+    private const string BlogUri = "/blog";
     private const string ProjectsUri = "/projects";
     private const string ContactUri = "/contact";
 
